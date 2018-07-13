@@ -1,0 +1,2 @@
+java -jar %cd%\micro-weather-eureka-server\build\libs\micro-weather-eureka-server-1.0.0.jar
+java -jar %cd%\hello-service\build\libs\msa-weather-city-eureka-1.0.0.jar
