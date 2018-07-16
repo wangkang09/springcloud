@@ -13,3 +13,5 @@ spring.cloud.config.label=master    #对应分支
 
 actuator配置：
 management.endpoints.web.exposure.include=refresh,routes #开启actuatorrefresh和routes端口，默认的好多都是关闭的
+
+zuul网关动态过滤功能：在《springcloud微服务实战》的P262
