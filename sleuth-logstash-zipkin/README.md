@@ -50,5 +50,14 @@
 * 因为是通过中间件传递消息，所有微服务端不要指定 base-url，需要指定mq配置 
 
 ---
-#### 区别 ####
-唯一区别是 rabbitMQ 引入了 rabbit 依赖
+#### Mysql 持久化 ####
+
+* zipkin 服务端需要加以下依赖  
+	compile group: 'io.zipkin.java', name: 'zipkin-server', version: '2.10.2'  
+	compile group: 'io.zipkin.java', name: 'zipkin-autoconfigure-ui', version: '2.10.2'  
+	compile group: 'io.zipkin.java', name: 'zipkin-autoconfigure-collector-rabbitmq', version: '2.10.2'  
+	compile group: 'io.zipkin.java', name: 'zipkin-autoconfigure-storage-mysql', version: '2.10.2'  
+	compile('org.springframework.boot:spring-boot-starter-jdbc')  
+	compile group: 'org.jooq', name: 'jooq', version: '3.11.3'  
+
+　　**注：**storage-mysql:2:10:2 需要 jooq:3.11.3 才可以，我的 mysql.sql 不知道为什么没有加载，其中的语句是我自己命令行操作的

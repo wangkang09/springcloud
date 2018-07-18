@@ -1,0 +1,19 @@
+server:
+  port: 9411
+zipkin:
+  collector:
+    rabbitmq:
+      addresses: localhost:5672
+      password: guest
+      username: guest
+      queue: zipkin
+
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/test
+    username: test
+    password: test
+    driver-class-name: com.mysql.jdbc.Driver
+    schema: classpath:/mysql.sql
+    continue-on-error: true
