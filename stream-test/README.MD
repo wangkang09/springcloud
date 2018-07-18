@@ -19,9 +19,11 @@
 
 * **消息分区**  
 　　保证拥有共同特征的消息数据始终有同一个消费者实例接收和处理。  　
+
 #### @SteamListener 和 @ServiceActivator 注解的区别 ####
 　　@SteamListener 内置了一系列的消息转换功能，可以直接实现 JSON 对象和 Java 类的转换。  
 　　当 JSON 转 Java 类时，只需要在配置文件中增加 spring.cloud.stream.bindings.<channelName 如：input>.content-type=application/json 属性。　　
+
 #### 相关配置文件属性 ####
 * **消费组**  
 spirng.cloud.stream.bindings.<channelName>.group=Group-A  
