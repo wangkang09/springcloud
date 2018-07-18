@@ -17,7 +17,6 @@ import org.springframework.web.client.RestTemplate;
 public class Trace1Application {
 
 	private static final Log logger = LogFactory.getLog(Trace1Application.class);
-
 	@Bean
 	@LoadBalanced
 	RestTemplate restTemplate(){
